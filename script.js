@@ -20,7 +20,7 @@
     var now = new Date();
     var distance = end - now;
     if (distance < 0) {
-      document.getElementById("headline").innerText = "I have landed in Kuala Lumpur!!!";
+      document.getElementById("headline").innerText = "Halima Saadiyah\nhas landed in\nKuala Lumpur!!!";
       document.getElementById("countdown").style.display = "none";
       document.getElementById("content").style.display = "block";
       clearInterval(x);
