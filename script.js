@@ -34,7 +34,7 @@
             var hours = Math.floor((distance % _day) / _hour);
             var minutes = Math.floor((distance % _hour) / _minute);
             var seconds = Math.floor((distance % _minute) / _second);
-            document.getElementById("headline").innerHTML = "insha\'Allah<br><div style=\"font - size: 2.5rem;\">Halima Saadiyah</div>will land in Kuala Lumpur in<br>";
+            document.getElementById("headline").innerHTML = "insha\'Allah<br><div style=\"font-size: 2.5rem;\">Halima Saadiyah</div>will land in Kuala Lumpur in<br>";
             document.getElementById("days").innerText = days,
                 document.getElementById("hours").innerText = hours,
                 document.getElementById("minutes").innerText = minutes,
