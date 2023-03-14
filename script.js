@@ -2,14 +2,14 @@
 
     var _end_year = 2023;
     var _end_month = 3;
-    var _end_date = 3;
-    var _end_hour = 2;
-    var _end_minute = 10;
+    var _end_date = 17;
+    var _end_hour = 15;
+    var _end_minute = 59;
     var _end_seconds = 0;
 
     var _flightDuration_day = 0;
-    var _flightDuration_hour = 7;
-    var _flightDuration_minute = 10;
+    var _flightDuration_hour = 0;
+    var _flightDuration_minute = 0;
     var _flightDuration_seconds = 0;
 
     var end = new Date(Date.UTC(_end_year, _end_month - 1, _end_date, _end_hour, _end_minute, _end_seconds));
@@ -34,14 +34,14 @@
             var hours = Math.floor((distance % _day) / _hour);
             var minutes = Math.floor((distance % _hour) / _minute);
             var seconds = Math.floor((distance % _minute) / _second);
-            document.getElementById("headline").innerHTML = "insha\'Allah<br><div style=\"font-size: 2.5rem;\">Halima Saadiyah</div>will land in Kuala Lumpur in<br>";
+            //document.getElementById("headline").innerHTML = "insha\'Allah<br><div style=\"font-size: 2.5rem;\">Halima Saadiyah</div>will land in Kuala Lumpur in<br>";
             document.getElementById("days").innerText = days,
                 document.getElementById("hours").innerText = hours,
                 document.getElementById("minutes").innerText = minutes,
                 document.getElementById("seconds").innerText = seconds;
 
             if (distance < 0) {
-                document.getElementById("headline").innerText = "Halima Saadiyah\nhas landed in\nKuala Lumpur!!!";
+                //document.getElementById("headline").innerText = "Halima Saadiyah\nhas landed in\nKuala Lumpur!!!";
                 document.getElementById("countdown").style.display = "none";
                 document.getElementById("content").style.display = "block";
                 clearInterval(x);
