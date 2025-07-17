@@ -1,10 +1,10 @@
 (function () {
 
-    var _end_year = 2023;
-    var _end_month = 8;
-    var _end_date = 29;
-    var _end_hour = 04;
-    var _end_minute = 50;
+    var _end_year = 2025;
+    var _end_month = 7;
+    var _end_date = 18;
+    var _end_hour = 20;
+    var _end_minute = 30;
     var _end_seconds = 0;
 
     var _flightDuration_day = 0;
