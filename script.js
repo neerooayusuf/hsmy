@@ -2,7 +2,7 @@
 
     var _end_year = 2025;
     var _end_month = 12;
-    var _end_date = 7;
+    var _end_date = 11;
     var _end_hour = 13; //UTC time
     var _end_minute = 00;
     var _end_seconds = 0;
