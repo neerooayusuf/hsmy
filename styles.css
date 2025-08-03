@@ -88,3 +88,33 @@ h3 {
   text-align: center;
   white-space: nowrap;
 }
+
+@media screen and (orientation: landscape) {
+  h1 {
+    font-size: 7vh;
+  }
+
+  h2 {
+    font-size: 5vh;
+  }
+
+  h3 {
+    font-size: 4vh;
+  }
+
+  .countdown {
+    font-size: 5vh;
+  }
+
+  .countdown span {
+    font-size: 8vh;
+  }
+
+  .countdown div div {
+    font-size: 3vh;
+  }
+
+  .container {
+    padding: 3vh 5vw;
+  }
+}
