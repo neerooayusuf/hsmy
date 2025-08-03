@@ -1,65 +1,61 @@
-(function () {
+// ======= CONFIGURATION =======
+const title = "Nikkah";
+const subtitle1 = "Muhammad Yusuf";
+const subtitle2 = "Halima Saadiyah";
+const backgroundImage = "1000324625.png"; // Put the image in the same folder
 
-    var _end_year = 2025;
-    var _end_month = 12;
-    var _end_date = 11;
-    var _end_hour = 13; //UTC time
-    var _end_minute = 00;
-    var _end_seconds = 0;
+// Event time given in UTC+4 (e.g. 03:00 at UTC+4)
+const eventYear = 2025;
+const eventMonth = 12; // December (1-based)
+const eventDay = 11;
+const eventHourUTCplus4 = 17;
+const eventMinute = 0;
+const eventSecond = 0;
 
-    var _flightDuration_day = 0;
-    var _flightDuration_hour = 0;
-    var _flightDuration_minute = 0;
-    var _flightDuration_seconds = 0;
+const offsetHours = 4;
 
-    var end = new Date(Date.UTC(_end_year, _end_month - 1, _end_date, _end_hour, _end_minute, _end_seconds));
+// Create a UTC timestamp *without* applying offset yet
+const baseUTCtimestamp = Date.UTC(eventYear, eventMonth - 1, eventDay, eventHourUTCplus4, eventMinute, eventSecond);
 
-    var _second = 1000;
-    var _minute = _second * 60;
-    var _hour = _minute * 60;
-    var _day = _hour * 24;
-    //var _month = _day * 30;
-    var timer;
+// Now subtract the offset (in ms) to get the true UTC time of the event
+const trueUTCtimestamp = baseUTCtimestamp - offsetHours * 60 * 60 * 1000;
 
-    function showRemaining() {
-        var now = new Date();
-        var flightDuration = (_flightDuration_day * 60 * 60 * 24 + _flightDuration_hour * 60 * 60 + _flightDuration_minute * 60 + _flightDuration_seconds) * 1000;
-        var inflight = (end - flightDuration - now) ;
-        var distance = end - now;
-        console.log("flightDuration: " + flightDuration)
-        console.log("inflight: " + inflight);
-        console.log("distance: " + distance);
-        if (inflight < 0) {
-            var days = Math.floor(distance / _day);
-            var hours = Math.floor((distance % _day) / _hour);
-            var minutes = Math.floor((distance % _hour) / _minute);
-            var seconds = Math.floor((distance % _minute) / _second);
-            //document.getElementById("headline").innerHTML = "insha\'Allah<br><div style=\"font-size: 2.5rem;\">Halima Saadiyah</div>will land in Kuala Lumpur in<br>";
-            document.getElementById("days").innerText = days,
-                document.getElementById("hours").innerText = hours,
-                document.getElementById("minutes").innerText = minutes,
-                document.getElementById("seconds").innerText = seconds;
+// Create a Date from true UTC timestamp (this will automatically convert to local time)
+const endDate = new Date(trueUTCtimestamp);
 
-            if (distance < 0) {
-                //document.getElementById("headline").innerText = "Halima Saadiyah\nhas landed in\nKuala Lumpur!!!";
-                document.getElementById("countdown").style.display = "none";
-                document.getElementById("content").style.display = "block";
-                clearInterval(x);
-            }
-        }
-        else {
-            var days = Math.floor(inflight / _day);
-            var hours = Math.floor((inflight % _day) / _hour);
-            var minutes = Math.floor((inflight % _hour) / _minute);
-            var seconds = Math.floor((inflight % _minute) / _second);
 
-            document.getElementById("days").innerText = days,
-                document.getElementById("hours").innerText = hours,
-                document.getElementById("minutes").innerText = minutes,
-                document.getElementById("seconds").innerText = seconds;
-        }
-        //var months = Math.floor(distance / _month);
-        
-    }
-    timer = setInterval(showRemaining, 1000);
-}());
+// ======= SETUP TEXT =======
+document.getElementById('headline1').textContent = title;
+document.getElementById('headline2').textContent = subtitle1;
+document.getElementById('headline3').textContent = subtitle2;
+
+//document.body.style.backgroundImage = `url(${backgroundImage})`;
+
+// ======= PLURALIZATION =======
+function pluralize(value, singular, plural) {
+  return value === 1 ? singular : plural;
+}
+
+// ======= COUNTDOWN FUNCTION =======
+function updateCountdown() {
+  const now = new Date();
+  const diff = Math.max((endDate - now) / 1000, 0); // Avoid negatives
+
+  const days = Math.floor(diff / 86400);
+  const hours = Math.floor((diff % 86400) / 3600);
+  const minutes = Math.floor((diff % 3600) / 60);
+  const seconds = Math.floor(diff % 60);
+
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = hours;
+  document.getElementById("minutes").textContent = minutes;
+  document.getElementById("seconds").textContent = seconds;
+
+  document.getElementById("label-days").textContent = pluralize(days, "Day", "Days");
+  document.getElementById("label-hours").textContent = pluralize(hours, "Hour", "Hours");
+  document.getElementById("label-minutes").textContent = pluralize(minutes, "Minute", "Minutes");
+  document.getElementById("label-seconds").textContent = pluralize(seconds, "Second", "Seconds");
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
