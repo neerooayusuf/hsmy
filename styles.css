@@ -1,84 +1,90 @@
-/* general styling */
-:root {
-  --smaller: .75;
-}
-
-
-* {
-  box-sizing: border-box;
+/* Reset and background */
+body, html {
   margin: 0;
   padding: 0;
-}
-
-html, body {
   height: 100%;
-  margin: 0;
-}
-
-body {
-  align-items: center;
-  background-color: #213334;
-opacity: 1;
-background-image:  radial-gradient(#1d2d2e 3px, transparent 3px), radial-gradient(#1d2d2e 3px, #213334 3px);
-background-size: 50px 50px;
-background-position: 0 0,25px 25px;
-  display: flex;
-  font-family: -apple-system, 
-    BlinkMacSystemFont, 
-    "Segoe UI", 
-    Roboto, 
-    Oxygen-Sans, 
-    Ubuntu, 
-    Cantarell, 
-    "Helvetica Neue", 
-    sans-serif;
-}
-
-.container {
-  color: #E2DFD2;
-  margin: 0 auto;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  color: white;
   text-align: center;
+
+  background-color: #213334;
+  background-image:  
+    radial-gradient(#1d2d2e 3px, transparent 3px), 
+    radial-gradient(#1d2d2e 3px, #213334 3px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
 }
 
+/* Overlay container */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 5vh 5vw;
+  box-sizing: border-box;
+}
+
+/* Headings */
 h1 {
-  font-weight:bold;
-  letter-spacing: .125rem;
-  text-transform: uppercase;
+  font-size: 6vh;
+  margin: 1vh 0;
 }
 
-li {
-  display: inline-block;
-  font-size: 1.5em;
-  list-style-type: none;
-  padding: 1em;
-  text-transform: uppercase;
+h2 {
+  font-size: 3.5vh;
+  margin: 0.5vh 0;
 }
 
-li span {
-  display: block;
-  font-size: 4.5rem;
+h3 {
+  font-size: 3vh;
+  margin: 0.5vh 0;
 }
 
-.emoji {
-  display: none;
-  padding: 1rem;
+/* Countdown wrapper to center and limit width */
+.countdown-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5vh;
 }
 
-.emoji span {
-  font-size: 2rem;
-  padding: 0 .5rem;
+/* Countdown row */
+.countdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;         /* ❌ prevent wrapping */
+  font-size: 4vh;
+  gap: 2vw;
+  width: 100%;
+  max-width: 90vw;           /* total timer area */
+  max-width: 75vh;           /* also limited by height if in landscape */
 }
 
-@media all and (max-width: 768px) {
-  h1 {
-    font-size: calc(2rem * var(--smaller));
-  }
-  
-  li {
-    font-size: calc(1.125rem * var(--smaller));
-  }
-  
-  li span {
-    font-size: calc(3.375rem * var(--smaller));
-  }
+/* Each time block */
+.countdown div {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 22vw;           /* controls block width per timer */
+}
+
+/* Numbers */
+.countdown span {
+  font-size: 6vh;
+  font-weight: bold;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Labels */
+.countdown div div {
+  font-size: 2.5vh;
+  margin-top: 1vh;
+  text-align: center;
+  white-space: nowrap;
 }
