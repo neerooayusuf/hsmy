@@ -8,8 +8,8 @@ const backgroundImage = "1000324625.png"; // Put the image in the same folder
 const eventYear = 2025;
 const eventMonth = 12; // December (1-based)
 const eventDay = 11;
-const eventHourUTCplus4 = 17;
-const eventMinute = 0;
+const eventHourUTCplus4 = 14;
+const eventMinute = 30;
 const eventSecond = 0;
 
 const offsetHours = 4;
