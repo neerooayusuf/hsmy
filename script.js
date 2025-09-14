@@ -7,9 +7,9 @@ const backgroundImage = "1000324625.png"; // Put the image in the same folder
 // Event time given in UTC+4 (e.g. 03:00 at UTC+4)
 const eventYear = 2025;
 const eventMonth = 12; // December (1-based)
-const eventDay = 11;
-const eventHourUTCplus4 = 14;
-const eventMinute = 30;
+const eventDay = 10;
+const eventHourUTCplus4 = 20;
+const eventMinute = 50;
 const eventSecond = 0;
 
 const offsetHours = 4;
