@@ -83,6 +83,31 @@
       .actions{display:none} /* hide Add to Calendar in landscape */
       .timer{gap: clamp(.4rem,1.6vw,.7rem)}
     }
+    /* Center the content when the CARD is the fullscreen element (landscape) */
+#card:fullscreen,
+#card:-webkit-full-screen { /* Safari */
+  display: grid;
+  place-items: center;
+  width: 100svw;
+  height: 100svh;
+  margin: 0;
+  border-radius: 0;     /* optional: remove rounded corners in FS */
+  box-shadow: none;     /* optional: remove shadow in FS */
+  padding: clamp(.9rem,3.8vw,1.6rem); /* keep your inner spacing */
+}
+
+/* Keep your normal card width when NOT fullscreen */
+#card:not(:fullscreen),
+#card:not(:-webkit-full-screen) {
+  width: min(92vw, 80ch);
+}
+
+/* Optional: ensure background fills the viewport in portrait fullscreen */
+:root:fullscreen,
+:root:-webkit-full-screen {
+  background: linear-gradient(135deg,var(--bg1),var(--bg2));
+}
+    
   </style>
 </head>
 <body>
