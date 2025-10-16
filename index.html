@@ -1,1 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Open Graph & Social -->
+<!-- TODO: Replace og:url and og:image with your live URLS -->
+<meta property="og:title" content="Nikkah Invitation | Muhammad Yusuf &amp; Halima Saadiyah" />
+<meta property="og:description" content="Join us on 10 December 2025 at 8:50 PM for the nikkah at Musjid Al-Mahmood, Terminus, Triolet." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://neerooayusuf.com/hsmy/" />
+<meta property="og:image" content="https://neerooayusuf.com/hsmy/hsmy.png" />
+<meta property="og:image:alt" content="Nikkah invitation for Muhammad Yusuf &amp; Halima Saadiyah" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Nikkah Invitation | Muhammad Yusuf &amp; Halima Saadiyah" />
+<meta name="twitter:description" content="10 December 2025 · 8:50 PM · Musjid Al-Mahmood, Terminus, Triolet" />
+<meta name="twitter:image" content="https://neerooayusuf.com/hsmy/hsmy.png" />
+<meta name="theme-color" content="#6b4e3d" />
+  <title>Nikkah Invitation | Muhammad Yusuf & Halima Saadiyah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --bg1:#faf6f0; --bg2:#f2e8d9; --ink:#2e2a27; --accent:#6b4e3d; --muted:#8a6d53;
+      --radius: 2rem;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: Poppins, system-ui, sans-serif; color:var(--ink);
+      background: linear-gradient(135deg,var(--bg1),var(--bg2));
+      min-height:100svh; display:grid; place-items:center;
+    }
+    .wrap{
+      width: min(92vw, 80ch);
+      margin: 0 auto;
+      padding: clamp(.9rem,3.8vw,1.6rem);
+      background:#fff; border-radius: var(--radius);
+      box-shadow: 0 0.75rem 2rem rgba(0,0,0,.08);
+      text-align:center;
+      position:relative;
+    }
+    .pretitle{letter-spacing:.12em; text-transform:uppercase; font-size: clamp(.78rem,2.2vw,.98rem); color: var(--muted);}
+    h1{font-family: 'Playfair Display', serif; font-weight:700; line-height:1.2; margin:.35em 0 .35em; font-size: clamp(1.6rem,6.2vw,2.2rem); color: var(--accent);}    
+    .names{display:inline-block; line-height:1.25}
+    .names .line{display:block}
+    .amp{font-family:'Playfair Display',serif; font-weight:700; font-size: clamp(1.1rem,5vw,1.8rem); margin: .05em .25em; color: var(--muted)}
 
+    .detail-block{margin: clamp(.5rem,2.4vw,.9rem) auto 0; font-size: clamp(.98rem,3.6vw,1.05rem); line-height:1.55}
+    .detail-block strong{font-weight:600}
+
+    /* TIMER */
+    .timer{display:grid; grid-template-columns: repeat(4, 1fr); gap: clamp(.5rem,2.4vw,.8rem); margin: clamp(.8rem,3vw,1.2rem) 0}
+    .box{background:var(--bg2); border-radius: 1rem; padding: clamp(.55rem,2.4vw,.85rem); height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center}
+    .num{display:block; font-weight:700; font-size: clamp(1.15rem,7vw,1.8rem); color: var(--accent)}
+    .lbl{font-size: clamp(.68rem,2.8vw,.88rem); color: var(--muted); white-space:nowrap}
+    .sfx{display:inline-block; width: .6em; text-align:left} /* reserved width (only seconds uses this) */
+    .sfx-plain{display:inline-block} /* no reserved width */
+
+    /* ADDRESS */
+    .address{display:flex; align-items:flex-start; justify-content:center; gap:.6em; margin-top: clamp(.6rem,2.4vw,.9rem)}
+    .address a{color:var(--accent); text-decoration:none; font-weight:600; line-height:1.35}
+    .address a:hover{text-decoration:underline}
+    .addr-line{display:block}
+    .pin{width:1.1em; aspect-ratio:1/1; display:inline-block; flex:0 0 auto; margin-top:.1em}
+
+    .actions{margin-top: clamp(.8rem,3vw,1.2rem); display:flex; justify-content:center}
+    .btn{appearance:none; border:0; border-radius: 999px; padding: clamp(.65rem,3vw,.85rem) clamp(1rem,4vw,1.15rem); font-weight:600; cursor:pointer; background:var(--accent); color:#fff}
+
+    /* HIDE actions while in any fullscreen mode */
+    :fullscreen .actions{display:none !important}
+
+    /* LANDSCAPE OPTIMIZATION */
+    @media (orientation: landscape){
+      .wrap{width:min(92vw, 100ch); padding: clamp(.7rem,2.5vw,1rem);}      
+      .names .line{display:inline}
+      .amp{margin: 0 .4em}
+      .detail-block div{display:block; white-space:nowrap}
+      .address .addr-line{display:inline}
+      .address .addr-line+.addr-line::before{content:", ";}
+      .actions{display:none} /* hide Add to Calendar in landscape */
+      .timer{gap: clamp(.4rem,1.6vw,.7rem)}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main" id="card">
+    <div class="pretitle">The Nikkah of</div>
+
+    <h1 class="names">
+      <span class="line">Muhammad Yusuf</span>
+      <span class="amp">&</span>
+      <span class="line">Halima Saadiyah</span>
+    </h1>
+
+    <section class="detail-block" aria-labelledby="details">
+      <div id="details" class="sr-only"></div>
+      <div><strong>Wednesday, 10 December 2025</strong></div>
+      <div><strong>8:50 PM</strong></div>
+    </section>
+
+    <div class="address">
+      <svg class="pin" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/></svg>
+      <a href="https://maps.app.goo.gl/vcrsocA2idfBWzdR6" target="_blank" rel="noopener">
+        <span class="addr-line">Musjid Al-Mahmood</span>
+        <span class="addr-line">Terminus, Triolet</span>
+      </a>
+    </div>
+
+    <section class="timer" aria-live="polite">
+      <div class="box"><span id="d" class="num">0</span><span class="lbl">Day<span class="sfx-plain" id="sfx-d">s</span></span></div>
+      <div class="box"><span id="h" class="num">0</span><span class="lbl">Hour<span class="sfx-plain" id="sfx-h">s</span></span></div>
+      <div class="box"><span id="m" class="num">0</span><span class="lbl">Minute<span class="sfx-plain" id="sfx-m">s</span></span></div>
+      <div class="box"><span id="s" class="num">0</span><span class="lbl">Second<span class="sfx" id="sfx-s">s</span></span></div>
+    </section>
+
+    <div class="actions">
+      <button id="addCal" class="btn" type="button">Add to Calendar</button>
+    </div>
+  </main>
+
+  <script>
+    // --- Event configuration ---
+    // Use explicit UTC to avoid parsing issues on some mobile browsers
+    // Mauritius (+04:00) at 20:50 equals 16:50 UTC.
+    const targetUTC = new Date(Date.UTC(2025, 11, 10, 16, 50, 0)); // months 0-based
+    const isoLocal = '2025-12-10T20:50:00+04:00'; // for ICS display
+
+    const eventTitle = 'Nikkah: Muhammad Yusuf & Halima Saadiyah';
+    const eventUrl = 'https://maps.app.goo.gl/vcrsocA2idfBWzdR6';
+    const eventLocation = 'Musjid Al-Mahmood, Terminus, Triolet';
+    const eventLocationWithLink = `${eventLocation} — ${eventUrl}`; // for ICS LOCATION
+
+    // Countdown target (absolute instant)
+    const target = targetUTC;
+
+    const dEl = document.getElementById('d');
+    const hEl = document.getElementById('h');
+    const mEl = document.getElementById('m');
+    const sEl = document.getElementById('s');
+    const sfx = {
+      d: document.getElementById('sfx-d'),
+      h: document.getElementById('sfx-h'),
+      m: document.getElementById('sfx-m'),
+      s: document.getElementById('sfx-s')
+    };
+
+    function pluralize(value, key){
+      const isOne = (value === 1);
+      if(key === 's'){
+        // seconds: keep width stable
+        sfx[key].style.visibility = isOne ? 'hidden' : 'visible';
+      } else {
+        // other labels: add/remove letter normally
+        sfx[key].textContent = isOne ? '' : 's';
+      }
+    }
+
+    function tick(){
+      const now = new Date();
+      const diff = target - now;
+      if (diff <= 0){
+        document.querySelector('.timer').innerHTML = '<strong>Alhamdulillah, the Nikkah has taken place.</strong>';
+        return;
+      }
+      const d = Math.floor(diff / (1000*60*60*24));
+      const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+      const m = Math.floor((diff % (1000*60*60)) / (1000*60));
+      const s = Math.floor((diff % (1000*60)) / 1000);
+
+      dEl.textContent = d; hEl.textContent = h; mEl.textContent = m; sEl.textContent = s;
+      pluralize(d,'d'); pluralize(h,'h'); pluralize(m,'m'); pluralize(s,'s');
+    }
+
+    tick();
+    setInterval(tick, 1000);
+
+    // --- Calendar (.ics) download ---
+    function toICSDate(dt){
+      const z = new Date(dt);
+      return z.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+    }
+    function escapeICSText(str){
+      return String(str)
+        .replace(/\\/g,'\\\\')
+        .replace(/\n/g,'\\n')
+        .replace(/,/g,'\\,')
+        .replace(/;/g,'\\;');
+    }
+
+    const startISO = new Date(isoLocal);
+    const endISO = new Date(startISO.getTime() + 60*60*1000);
+    const ics = `BEGIN:VCALENDAR\n`
+      + `VERSION:2.0\n`
+      + `PRODID:-//Nikkah Invite//EN\n`
+      + `CALSCALE:GREGORIAN\n`
+      + `METHOD:PUBLISH\n`
+      + `BEGIN:VEVENT\n`
+      + `UID:${crypto.randomUUID()}\n`
+      + `DTSTAMP:${toICSDate(new Date())}\n`
+      + `DTSTART:${toICSDate(startISO)}\n`
+      + `DTEND:${toICSDate(endISO)}\n`
+      + `SUMMARY:${escapeICSText(eventTitle)}\n`
+      + `LOCATION:${escapeICSText(eventLocation)}\n`
+      + `URL:${escapeICSText(eventUrl)}\n`
+      + `DESCRIPTION:${escapeICSText(eventUrl)}\n`
+      + `END:VEVENT\n`
+      + `END:VCALENDAR`;
+
+    document.getElementById('addCal').addEventListener('click', (e)=>{
+      e.stopPropagation(); // don't affect fullscreen toggle
+      const blob = new Blob([ics], {type:'text/calendar'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'nikkah-invite.ics';
+      document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+    });
+
+    // --- Fullscreen logic ---
+    function enterFullscreen(){
+      const isPortrait = window.matchMedia('(orientation: portrait)').matches;
+      const el = isPortrait ? document.documentElement : document.getElementById('card');
+      if (document.fullscreenElement) return;
+      const req = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen || el.mozRequestFullScreen;
+      if (req) req.call(el);
+    }
+    function exitFullscreen(){
+      if (!document.fullscreenElement) return;
+      const ex = document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen || document.mozCancelFullScreen;
+      if (ex) ex.call(document);
+    }
+
+    // Click anywhere: toggle based on state
+    document.addEventListener('click', (e)=>{
+      // Allow calendar button and links to work without toggling
+      if (e.target.closest('#addCal') || e.target.closest('a')) return;
+      if (document.fullscreenElement){
+        exitFullscreen();
+      } else {
+        enterFullscreen();
+      }
+    });
+
+    // Re-evaluate target element if orientation changes while fullscreen
+    window.addEventListener('orientationchange', () => {
+      if (document.fullscreenElement){
+        exitFullscreen();
+        setTimeout(enterFullscreen, 50);
+      }
+    });
+  </script>
+</body>
+</html>
